@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e3f2fd;
+    min-height: 100vh;
+}
+.wrapper{
+
+    width: 780px;
+    border-radius: 20px;
+    background: #141414;
+    padding: 35px 40px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    color: #b2b2b2;
+    align-items: center;
+}
+header h2{
+    font-size: 1.6rem;
+}
+.column{
+    display: flex;
+    align-items: center;
+}
+.column span{
+    font-weight: 500;
+    font-size: 1.19rem;
+    margin-right: 15px;
+}
+
+input[type=range]{
+    accent-color: #fff
+}
+input[type=checkbox]{
+    height: 30px;
+    width: 60px;
+    background: #4b4b4b;
+    appearance: none;
+    position: relative;
+    border-radius: 30px;
+    cursor: pointer;
+}
+input[type=checkbox]::before{
+    content: " ";
+    height: 20px;
+    width: 20px;
+    background-color: #8c8c8c;
+    border-radius: inherit;
+    position: absolute  ;
+    top: 15%;
+    left: 5px;
+    transition: all 0.3s ease-in-out;
+}
+input[type=checkbox]:checked:before{
+    transform: translateX(30px);
+    background: #fff;
+}
+.piano-keys{
+    list-style: none;
+    color: #a2a2a2;
+    display: flex;
+    margin-top: 40px;
+    text-transform:uppercase
+}
+.piano-keys li{
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.piano-keys .white{
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    background:linear-gradient(#fff 90%,#eee 4%);
+    border: 1px solid black;
+}
+.piano-keys .white:active{
+    box-shadow: -5px 5px 20px rgba(0,0,0,0.5);
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+
+}
+.piano-keys .black{
+    width: 44px;
+    height: 140px;
+    background: linear-gradient(#333, #000);
+    border-radius: 0 0 5px 5px;
+    margin: 0 -22px 0 -22px;
+    z-index: 1;
+}
+.view{
+    display: none;
+}
+.piano-keys .black:active{
+    box-shadow: -5px 5px 20px rgba(255,255,255,0.2);
+    background: linear-gradient(to bottom, #000, #434343);
+
+}
+.piano-keys span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 1.13rem;
+    text-align: center;
+}
+
+
+@media only screen and (max-width:420px){
+    .wrapper{
+        rotate:calc(90deg);
+    }
+
+}

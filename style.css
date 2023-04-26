@@ -119,11 +119,11 @@ input[type=checkbox]:checked:before{
     text-align: center;
 }
 
-@media only screen and (max-width:1080px){
+@media only screen and (max-width:420px){
     .wrapper{
         width: 100vh;
         padding: 20px;
-/*         rotate: calc(90deg); */
+        rotate: calc(90deg);
         height: 100vw;
     }
 }

@@ -123,7 +123,7 @@ input[type=checkbox]:checked:before{
     .wrapper{
         width: 100vh;
         padding: 20px;
-        rotate: calc(90deg);
+/*         rotate: calc(90deg); */
         height: 100vw;
     }
 }
